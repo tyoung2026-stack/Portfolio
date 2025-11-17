@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact Page</title>
+        <link rel="icon" type="image/png" href="pimages/favicon.jpg">
+        <link rel="stylesheet" href="pstyles/pcstyles.css">
+	</head>
+	<body>
+	    <fieldset>
+  	    <legend>Contact Form</legend>
+  	    <label for="name">Full Name:</label>
+  	    <input type="text" id="name" name="name">
+  	    <br>
+  	    <label for="email">Email:</label>
+  	    <input type="text" id="email" name="email">
+  	    <br>
+  	    <label for="message">Message:</label>
+  	    <input type="text" id="message" name="message">
+  	    <br>
+    	<button type="button" onclick="alert('Contact form submitted!')">Submit</button>
+	    </fieldset>
+	    <h3>Others!</h3>
+	    <p>Email me: <a href="mailto:yourname@example.com">trinityay1234@gmail.com</a></p>
+	  	<a href="https://github.com/tyoung2026-stack" target="_blank">My Github page!&#10084;</a>
+    <p>Send me your location!</p>
+  
+  <button id="sendLocation">Send Location</button>
+  
+  <p id="result"></p>
+  
+  <script>
+    const getLocationButton = document.getElementById('sendLocation');
+    const resultElement = document.getElementById('result');
+    
+    getLocationButton.addEventListener('click', () => {
+      if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition((position) => {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+          resultElement.textContent = `Latitude: ${latitude}, Longitude: ${longitude}`;
+        });
+      } else {
+        resultElement.textContent = "Geolocation is not supported by your browser.";
+      }
+    });
+  </script>
+    
+    <div class="rotating-element">Goodbye!</div>
+	</body>
+	<p>&copy; 2025 Made by Trinity Young &#10084; All Rights Reserved.</p>
+</html>
