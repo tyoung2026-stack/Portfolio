@@ -1,0 +1,47 @@
+header {
+    background-position: center;
+    background-color: #A47ED6;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-position: center;
+    background-color: #7774C7;
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar a {
+    background-color: #4569B7;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.navbar a:hover {
+    background-color: #61A1B3;
+}
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotating-element {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: #85D7A5;
+    color: #61A1B3;
+    text-align: center;
+    line-height: 100px;
+    
+    animation-name: rotateAnimation;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
